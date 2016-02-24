@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_click_bg">
+    <RelativeLayout
+        android:paddingTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.thinksky.redefine.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/side_user_avatar"
+            android:id="@+id/replyUserImage" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:id="@+id/replyUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="诸葛大帅哥"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/replyUserImage" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/group_less"
+            android:id="@+id/replyTime"
+            android:text="2018年10月1日"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/replyUserName"
+            android:layout_toRightOf="@+id/replyUserImage" />
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:id="@+id/huiFuPingLun"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/item_click_bg">
+             <ImageView
+                android:background="@drawable/forum_com"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/group_less"
+            android:padding="5dp"
+            android:id="@+id/replyTextView"
+            android:text="这是一条评论！"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/issue_huifu"
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:background="@drawable/forum_edit_backgroud"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/issue_huifu_edittext"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edittext_background"
+                android:layout_height="38dp" />
+            <TextView
+                android:id="@+id/issue_huifu_send_com"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:text="发表"
+                android:textColor="#A9ADB0"
+                android:layout_height="38dp">
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

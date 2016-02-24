@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/lzl_layout"
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/lzl_one"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <com.thinksky.redefine.CircleImageView
+                android:id="@+id/lzl_userHead"
+                android:layout_width="25dp"
+                android:src="@drawable/side_user_avatar"
+                android:layout_height="25dp" />
+            <TextView
+                android:paddingLeft="5dp"
+                android:id="@+id/lzl_username"
+                android:layout_width="wrap_content"
+                android:text="泰伦"
+                android:textColor="#38629C"
+                android:layout_height="wrap_content" />
+            <include
+                android:visibility="gone"
+                android:id="@+id/lzl_louzhu"
+                layout="@layout/louzhu" />
+            <TextView
+                android:id="@+id/lzl_reply_time"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:textSize="12sp"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                android:text="2014.9.02"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/lzl_reply_content"
+            android:layout_below="@+id/lzl_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="回复内容"
+            android:textColor="#636363" />
+    </RelativeLayout>
+</LinearLayout>

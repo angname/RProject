@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#EDEDED"
+    >
+    <!--页头-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head_border"
+        android:id="@+id/header"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp">
+
+        <RelativeLayout
+            android:id="@+id/Post_detail_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/arrow_left"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/forum_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="论坛名字"
+                android:singleLine="true"
+                android:textColor="@color/tab"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <!--页脚-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F6FAFB"
+        android:id="@+id/footer"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        >
+        <LinearLayout
+            android:id="@+id/Post_detail_editBox"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:weightSum="10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/forum_edit_backgroud"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/round_border"
+                android:layout_height="38dp">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:src="@drawable/plus"
+                    android:layout_height="22dp" />
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/Post_detail_edittext"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:layout_height="38dp" />
+                <TextView
+                    android:id="@+id/Post_detail_sendBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.6"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:text="发表"
+                    android:textColor="#A9ADB0"
+                    android:layout_height="38dp">
+                </TextView>
+            </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/Post_detail_like_com_layout"
+           android:layout_width="fill_parent"
+           android:background="#F6FAFB"
+           android:weightSum="10"
+           android:visibility="visible"
+           android:gravity="center"
+           android:layout_height="50dp">
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="4.5"
+               android:layout_marginRight="6dp"
+               android:background="@drawable/border"
+               android:id="@+id/Post_detail_likeBtn"
+               android:gravity="center_horizontal|center_vertical"
+               android:layout_height="35dp">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="20dp"
+
+                   android:src="@drawable/forum_like"
+                   />
+               <TextView
+                   android:id="@+id/Post_detail_supportCounts"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#787C7F"
+                   android:text="230"
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="4.5"
+               android:background="@drawable/border"
+               android:layout_marginLeft="6dp"
+               android:id="@+id/Post_detail_comBtn"
+               android:gravity="center_horizontal|center_vertical"
+               android:layout_height="35dp">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="20dp"
+                   android:src="@drawable/forum_com"
+                   />
+               <TextView
+                   android:id="@+id/Post_detail_comCount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#787C7F"
+                   android:text="230"
+                   />
+           </LinearLayout>
+           </LinearLayout>
+
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/Detail_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_below="@+id/header"
+                android:layout_above="@+id/footer"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:layout_height="fill_parent">
+                <com.thinksky.myview.MyDetailsListView
+                    android:id="@+id/Post_detail_comList"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:minHeight="300dp"
+                    android:listSelector="#00000000"
+                    android:divider="@null"
+                    android:layout_height="match_parent">
+                </com.thinksky.myview.MyDetailsListView>
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

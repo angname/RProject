@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/head_border">
+
+    <!--页头-->
+    <RelativeLayout
+        android:id="@+id/group_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head_border"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp">
+        <ImageView
+            android:id="@+id/group_menu"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/menu"
+            android:layout_alignParentLeft="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/tab"
+            android:gravity="center_vertical"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:id="@+id/my_group_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的群组"
+                android:textColor="#ffffff"
+                android:padding="10dp" />
+            <TextView
+                android:id="@+id/all_group_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部群组"
+                android:padding="10dp"
+                android:background="@color/head"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/type_menu"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/chose_menu"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/linearLayout2" />
+        <ImageView
+            android:id="@+id/add_group"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_add_grey600_48dp"
+            android:padding="4dp"/>
+
+    </RelativeLayout>
+
+    <com.thinksky.myview.MyListView
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:divider="#F0F0F0"
+        android:dividerHeight="1dp"
+        android:id="@+id/groupListView"
+        android:visibility="gone"
+        android:layout_below="@+id/group_top"
+        android:background="#E0E0E0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.thinksky.myview.MyListView>
+    <LinearLayout
+        android:id="@+id/group_probar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/group_top"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+        <TextView
+            android:textColor="@color/black"
+            android:text="加载中"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/progressBar_text"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:text="点击登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

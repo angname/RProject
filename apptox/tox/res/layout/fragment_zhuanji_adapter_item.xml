@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--头部信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#E3E3E3"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="显示全部>" />
+        </RelativeLayout>
+
+        <!--图片信息-->
+        <com.thinksky.fragment.InnerGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:numColumns="3"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</FrameLayout>

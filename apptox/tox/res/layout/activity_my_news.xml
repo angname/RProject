@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/head_border"
+    android:orientation="vertical">
+
+    <!--页头-->
+    <RelativeLayout
+        android:id="@+id/news_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head_border"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp">
+        <ImageView
+            android:id="@+id/back_menu"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我的投稿"
+            android:textColor="@color/tab"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/news_post"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/pencil" />
+    </RelativeLayout>
+
+    <!--Body-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.thinksky.PagerSlidingTabStrip.PagerSlidingTabStrip
+            android:id="@+id/my_news_tabs"
+            app:pstsIndicatorHeight="1dp"
+            app:pstsUnderlineHeight="1dp"
+            app:pstsTabPaddingLeftRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/my_news_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

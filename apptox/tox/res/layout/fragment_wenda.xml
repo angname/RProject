@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wenda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thinksky.fragment.WendaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--顶部模块预留-->
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="15dp">
+
+            <RadioButton
+                android:id="@+id/rb_rmwd"
+                style="@style/main_wd"
+                android:checked="false"
+                android:drawableTop="@drawable/iconfontremenwenda"
+                android:text="热门话题" />
+
+            <RadioButton
+                android:id="@+id/rb_zgxs"
+                style="@style/main_wd"
+                android:drawableTop="@drawable/iconfontzuigaoxuanshang"
+                android:text="@string/tab_news_center" />
+
+            <RadioButton
+                android:id="@+id/rb_wdtw"
+                style="@style/main_wd"
+                android:drawableTop="@drawable/iconfontwodetiwen"
+                android:text="@string/tab_smart_service" />
+
+            <RadioButton
+                android:id="@+id/rb_yjj"
+                style="@style/main_wd"
+                android:checked="false"
+                android:drawableTop="@drawable/iconfontyijiejue"
+                android:text="@string/tab_gov_affairs" />
+
+        </RadioGroup>
+
+
+        <!--内容列表-->
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="12dp"
+            android:listSelector="@android:color/transparent"
+            android:divider="@null"
+            android:cacheColorHint="@android:color/transparent"
+            android:layout_weight="0.8" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head_border"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp">
+
+        <RelativeLayout
+            android:id="@+id/Comment_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/arrow_left"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/Comment_Send"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/head"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="发送"
+                android:textColor="@color/tab" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+       >
+
+        <EditText
+            android:id="@+id/Comment_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:background="#00000000"
+            android:gravity="start"
+            android:hint="说说看有何看法。"
+            android:textSize="16sp" />
+
+       <RelativeLayout
+           android:id="@+id/Comment_face"
+           android:layout_width="fill_parent"
+           android:layout_height="50dp"
+           android:layout_above="@+id/Comment_FaceArea"
+           android:layout_alignParentBottom="true"
+           android:background="#F9F9F9"
+           android:orientation="horizontal"
+
+
+        >
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="1dp"
+               android:background="#BDBDBD"
+               >
+           </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Comment_FaceBtn"
+                android:layout_width="70dp"
+
+                android:gravity="center_horizontal|center_vertical"
+
+                android:layout_height="50dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/face"
+                    />
+                </LinearLayout>
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:background="@drawable/jbline"
+               android:layout_alignParentBottom="@+id/Comment_FaceBtn"
+               android:layout_height="2dp">
+
+           </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:id="@+id/Comment_FaceArea"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_height="140dp">
+
+            </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

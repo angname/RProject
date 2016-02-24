@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/dl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".MainActivity">
+
+
+    <include layout="@layout/left_view_layout"/>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/head_border"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/iconfont_gerenshezhi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="鱼知乐"
+                android:textColor="@color/tab"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/iconfont_sousuo"/>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"></FrameLayout>
+
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom"
+            android:background="@drawable/head_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="6dp">
+
+            <RadioButton
+                android:id="@+id/rb_shouye"
+                style="@style/main_tab_bottom"
+                android:checked="false"
+                android:drawableTop="@drawable/home_progress"
+                android:text="@string/tab_function" />
+
+            <RadioButton
+                android:id="@+id/rb_weibo"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/dongtai_progress"
+                android:text="@string/tab_news_center" />
+
+            <RadioButton
+                android:id="@+id/rb_yulequan"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/ylq_progress"
+                android:text="@string/tab_smart_service" />
+
+            <RadioButton
+                android:id="@+id/rb_yuyisheng"
+                style="@style/main_tab_bottom"
+                android:checked="false"
+                android:drawableTop="@drawable/yys_progress"
+                android:text="@string/tab_gov_affairs" />
+
+            <RadioButton
+                android:id="@+id/rb_mall"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/mall_progress"
+                android:text="@string/tab_setting" />
+        </RadioGroup>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

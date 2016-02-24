@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/post_comment"
+
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/landlord_layout"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/com1"
+
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <com.thinksky.redefine.CircleImageView
+                android:id="@+id/landlord_userhead"
+                android:layout_width="25dp"
+                android:src="@drawable/side_user_avatar"
+                android:layout_height="25dp" />
+            <TextView
+                android:id="@+id/landlord_username"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="小乔"
+                android:textColor="#38629C"
+                android:layout_height="wrap_content" />
+            <include
+                android:visibility="gone"
+                android:id="@+id/com1_louzhu"
+                layout="@layout/louzhu" />
+            <TextView
+                android:id="@+id/landlord_time"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:layout_marginLeft="90dp"
+                android:textSize="12sp"
+                android:paddingRight="5dp"
+                android:text="2014.9.02"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/landlord_content"
+            android:layout_below="@+id/com1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="侬好啊啊啊啊啊啊啊啊asdad打上大大"
+            android:textColor="#636363"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="10dp"
+android:orientation="vertical" >
+    <TextView
+        android:id="@+id/issue_reply_load"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击加载更多评论"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <ProgressBar
+        android:id="@+id/issue_reply_proBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+</LinearLayout>

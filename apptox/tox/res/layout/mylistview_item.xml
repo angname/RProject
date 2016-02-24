@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    android:weightSum="1"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mylistview_corner"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/enterDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:weightSum="10"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <com.thinksky.redefine.CircleImageView
+                    android:id="@+id/Item_UserHead"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/side_user_avatar"
+                    tools:border_width="2dp"
+                    tools:border_color="@color/light" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="4"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Item_UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.8"
+                        android:layout_marginLeft="10dp"
+                        android:text="UserName"
+                        android:singleLine="true"
+                        android:textColor="#527CAB"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/Weibo_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="来自:网站端"
+                        android:singleLine="true"
+                        android:textColor="#9A9A9A"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:paddingRight="15dp"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/Weibo_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="置顶"
+                    android:padding="2dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/text_blue_round"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content">
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Item_Ctime"
+                    android:layout_height="wrap_content"
+                    android:textColor="#527CAB"
+                    android:textSize="15sp"
+                    android:text="2014.7.3" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.thinksky.redefine.FaceTextView
+            android:id="@+id/Item_MainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:text="　一日，将军潜入花木兰帐内欲行不归，强行要上木兰姐姐，就在这时，将军忽然指着花木兰大叫一声：你~你~你~竟然是个女的......"
+            android:textSize="16sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+
+
+        <!--转发微博区-->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:id="@+id/RepostWeibo"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/Repost_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" @小泽玛丽罗"
+                android:paddingLeft="15dp"
+                android:visibility="gone" />
+
+            <com.thinksky.redefine.FaceTextView
+                android:id="@+id/Repost_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" 爱的季节上课吃饭你好数据库的方寸山潍坊潍坊为人父为人父服务服务范围分"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:paddingBottom="5dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/Repost_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="2014.7.31"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <!--图片区-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="9">
+
+                <ImageView
+                    android:id="@+id/Item_MainImg"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/friends_sends_pictures_no"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/Item_MainImg1"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/friends_sends_pictures_no"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/Item_MainImg2"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/friends_sends_pictures_no"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+                <LinearLayout
+                    android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mylistview_bottom_corner"
+                    android:weightSum="9"
+                    android:gravity="center_vertical|right">
+
+                    <LinearLayout
+                        android:id="@+id/Item_Up"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:background="#FFFFFF"
+                        android:gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/Item_Up_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/heart_grary" />
+                        <TextView
+                            android:id="@+id/Like_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="3dp"
+                            android:text="赞"
+                            android:textColor="#9A9A9A"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:background="@drawable/jbshape"
+                        android:layout_height="fill_parent">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/SendRepostWeibo"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:weightSum="2"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:background="#FFFFFF"
+                        android:gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/Item_repost_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/repost" />
+                        <TextView
+                            android:id="@+id/Repost_Text"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:paddingLeft="3dp"
+                            android:text="99"
+                            android:textColor="#9A9A9A"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:background="@drawable/jbshape"
+                        android:layout_height="fill_parent">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ListView_itemComment"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:weightSum="2"
+                        android:layout_height="fill_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/chat_radius_weibo" />
+                        <TextView
+                            android:id="@+id/Item_CommentNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:paddingLeft="3dp"
+                            android:gravity="center_vertical"
+                            android:text="评论"
+                            android:textColor="#9A9A9A"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:background="@drawable/jbline"
+            android:layout_height="2dp">
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

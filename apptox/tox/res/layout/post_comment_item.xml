@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/post_comment"
+    android:paddingTop="15dp"
+
+    android:orientation="vertical">
+
+    <include layout="@layout/halving_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+        <!--头像-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.thinksky.redefine.CircleImageView
+                android:id="@+id/Post_comItem_UserHead"
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/side_user_avatar"
+                tools:border_color="@color/light"
+                tools:border_width="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.5"
+            android:orientation="vertical">
+            <!--用户信息-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/Post_commentUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="艺小胖大大的"
+                            android:textColor="@color/post_comment_username"
+                            android:textSize="16sp" />
+                        <include
+                            android:visibility="gone"
+                            android:id="@+id/Post_comItem_userName_louzhu"
+                            layout="@layout/louzhu" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Post_detail_comment_time_louceng"
+                        android:layout_gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="第2楼 2014-07-27"
+                        android:textColor="@color/post_time"
+                        android:textSize="11sp" />
+                     <RelativeLayout
+                         android:layout_width="140dp"
+                         android:layout_gravity="right"
+                         android:layout_height="wrap_content">
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:src="@drawable/com_function"
+                             android:id="@+id/Post_detail_floatComBtn"
+                             android:layout_gravity="right"
+                             android:layout_alignParentRight="true"
+                             android:layout_height="wrap_content" />
+                         <LinearLayout
+                             android:id="@+id/Post_detail_com_floatLayout"
+                             android:layout_width="90dp"
+                             android:layout_alignParentLeft="true"
+                             android:layout_gravity="center"
+                             android:padding="3dp"
+                             android:orientation="horizontal"
+                             android:weightSum="10"
+                             android:visibility="gone"
+                             android:gravity="center"
+                             android:background="@drawable/comfun"
+                             android:layout_height="40dp">
+                             <LinearLayout
+                                 android:gravity="center"
+                                 android:background="@drawable/comfun_light"
+                                 android:layout_width="80dp"
+
+                                 android:layout_height="30dp">
+                                 <ImageView
+                                     android:src="@drawable/chat_radius"
+
+                                     android:layout_width="18dp"
+                                     android:layout_marginRight="5dp"
+                                     android:layout_height="18dp" />
+                                 <TextView
+                                     android:layout_width="wrap_content"
+                                     android:textColor="@color/light"
+                                     android:text="回复"
+                                     android:layout_height="wrap_content" />
+                             </LinearLayout>
+
+                         </LinearLayout>
+
+                         </RelativeLayout>
+
+            </FrameLayout>
+            <TextView
+                android:id="@+id/Post_comContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="妹子好"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+            <LinearLayout
+                android:id="@+id/Post_comment_photoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <!--//分割线-->
+            <include
+                android:id="@+id/Post_comment_halvingLine"
+                layout="@layout/halving_line" />
+            <!--//评论区-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp">
+                <RelativeLayout
+                    android:id="@+id/com1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:id="@+id/com1"
+
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <com.thinksky.redefine.CircleImageView
+                            android:id="@+id/com1_userHead"
+                            android:layout_width="25dp"
+                            android:src="@drawable/side_user_avatar"
+                            android:layout_height="25dp" />
+                        <TextView
+                            android:id="@+id/com1_username"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="小乔"
+                            android:textColor="#38629C"
+                            android:layout_height="wrap_content" />
+                        <include
+                            android:visibility="gone"
+                            android:id="@+id/com1_louzhu"
+                            layout="@layout/louzhu" />
+                        <TextView
+                            android:id="@+id/com1_time"
+                            android:layout_width="match_parent"
+                            android:gravity="right"
+
+                            android:textSize="12sp"
+                            android:paddingRight="5dp"
+                            android:textColor="@color/black"
+                            android:text="2014.9.02"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/Post_detail_comment2comment"
+                        android:layout_below="@+id/com1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="侬好啊啊啊啊啊啊啊啊asdad打上大大"
+                        android:textColor="#636363"
+                        android:textSize="16sp" />
+                    </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/com2_layout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/com2"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <com.thinksky.redefine.CircleImageView
+                            android:id="@+id/com2_userHead"
+                            android:layout_width="25dp"
+                            android:src="@drawable/side_user_avatar"
+                            android:layout_height="25dp" />
+                        <TextView
+                            android:id="@+id/com2_username"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="小乔"
+                            android:textColor="#38629C"
+                            android:layout_height="wrap_content" />
+                        <include
+                            android:visibility="gone"
+                            android:id="@+id/com2_louzhu"
+                            layout="@layout/louzhu" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/com2_time"
+                            android:layout_width="match_parent"
+                            android:gravity="right"
+                            android:textSize="12sp"
+                            android:paddingRight="5dp"
+                            android:text="2014.9.02"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/Post_detail_comment2comment1"
+                        android:layout_below="@+id/com2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Q746238932：侬好啊啊啊啊啊啊啊啊asdad打上大大"
+                        android:textColor="#636363"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+
+
+               <!-- <TextView
+                    android:id="@+id/Post_detail_comment2comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安小汐shy 楼主：侬好啊啊啊啊啊啊啊啊asdad打上大大"
+                    android:textColor="#636363"
+                    android:textSize="16sp" />-->
+
+
+            </LinearLayout>
+            <!--查看更多-->
+            <TextView
+                android:id="@+id/Post_more_com2com"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="查看更多回复"
+                android:textColor="@color/comment2comment_username"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

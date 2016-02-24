@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingTop="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp">
+
+        <ImageView
+            android:id="@+id/Menu"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/menu"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            />
+
+        <ImageView
+            android:id="@+id/SendWeibo"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/pencil" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/tab"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--<com.thinksky.tox.SegmentControl-->
+                <!--xmlns:segmentcontrol="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/segment_control2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="16sp"-->
+                <!--segmentcontrol:texts="热门动态|我关注的|我的动态"-->
+                <!--segmentcontrol:selectedBackgroundColors="#2a93d5"-->
+                <!--segmentcontrol:cornerRadius="7dip"-->
+                <!--segmentcontrol:direction="horizon"-->
+                <!--segmentcontrol:verticalGap="10dip"-->
+                <!--segmentcontrol:horizonGap="20dip"-->
+                <!--segmentcontrol:selectedIndex="0"-->
+                <!--android:layout_marginTop="14dp"/>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TopMenuOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#2a93d5"
+                    android:gravity="center"
+                    android:text="热门动态"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="2dp" />
+
+                <TextView
+                    android:id="@+id/TopMenuTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="我关注的"
+
+                    android:textColor="@color/black"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/TopMenuThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="我的动态"
+
+                    android:textColor="@color/black"
+
+                   />
+                <!--android:textColor="#815F3D"
+                android:visibility="gone"-->
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/load_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <ProgressBar
+            style="@style/myProgressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="拼命加载中..."
+            android:textColor="#815F3D"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/HomeNoValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="暂无微博哦，快点击右上角发表微博吧"
+        android:textColor="#815F3D"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/HomeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        </LinearLayout>
+
+</LinearLayout>
